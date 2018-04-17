@@ -1,66 +1,33 @@
 #menu {
   #menu_top {
     background-color: $bg-menu-top;
+    padding: 15px 0;
+    color: white;
     img.menu_logo {
       height: 50px;
     }
-    ul.menu-search {
-      display: block;
-      height: 46px;
-      display: inline-flex;
-      list-style: none;
-      width: 100%;
-      li {
-        input {
-          height: 49px;
-          width: 100%;
-          display: block;
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          background-color: white;
-          color: #333333;
-          //border: 1px solid #333333;
-          border: none;
-        }
-        a {
-          padding: 15px;
-          background-color: $sub-color;
-          color: #fff;
-          display: inline-block;
-          font: normal normal normal 14px/1 FontAwesome;
-          font-size: inherit;
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-          height: 47px;
-          float: left;
-        }
-      }
-    }
-  }
-  #menu_logo_center {
-    img {
-      width: inherit;
-    }
   }
   #menu_bottom {
-    background-color: green;
+    background-color: white;
     .is_active {
       background-color: $sub-color;
+    }
+    img.logo{
+      padding: 25px;
+      width: 125%;
     }
 
     ul.main_menu {
       display: block;
       //float: left;
+      height:100%;
 
       li {
-        display: inline-block;
-        padding: 15px;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px;
         position: relative;
+        height: 100%;
         i {
           color: white;
           font-size: 16px;
@@ -70,11 +37,15 @@
           font-size: 15px;
           text-transform: uppercase;
           font-weight: bold;
-          color: white;
+          color: black;
         }
       }
       li:hover {
+        border-top: 5px solid $main-color;
         background-color: $sub-color;
+        a{
+          color: white;
+        }
       }
       li.has-item-down {
         transition: all 0.2s;
@@ -82,63 +53,34 @@
           position: absolute;
           opacity: 0;
           display: none;
-          background-color: $sub-color;
+          background-color: white;
           top: 100%;
           left: 0;
           z-index: 9;
           width: 160%;
+          li:first-child{
+            border-top: 5px solid $main-color;
+          }
           li {
             display: block;
             padding-left: 10px;
             transition: all 0.2s;
+            border: none;
+            a{
+              color: black;
+            }
           }
           li:hover {
             padding-left: 20px;
+            a{
+              color: white;
+            }
           }
         }
       }
       li.has-item-down:hover > ul {
         display: block;
         opacity: 1;
-      }
-      ul.menu-search {
-        display: block;
-        //height: 46px;
-        display: inline-flex;
-        list-style: none;
-        width: 100%;
-        li.li-search {
-          padding: 0;
-          input {
-            height: 46px;
-            width: 100%;
-            display: block;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            background-color: white;
-            color: #333333;
-            border: 1px solid $main-color;
-            border-left: none;
-            //border: none;
-          }
-          a {
-            padding: 16px;
-            background-color: $sub-color;
-            color: #fff;
-            display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-            height: 46px;
-            //float: left;
-          }
-        }
       }
     }
   }

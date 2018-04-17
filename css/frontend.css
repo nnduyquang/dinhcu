@@ -58,6 +58,38 @@ img {
   border: none;
 }
 
+.cm_title {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  color: #c02026;
+  font-weight: bold;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.cm_title:before {
+  position: absolute;
+  left: -148px;
+  top: 50%;
+  margin-top: -1px;
+  height: 2px;
+  width: 108px;
+  border-top: 2px solid #c02026;
+  content: "";
+}
+
+.cm_title:after {
+  position: absolute;
+  right: -148px;
+  top: 50%;
+  margin-top: -1px;
+  height: 2px;
+  width: 108px;
+  content: "";
+  border-top: 2px solid #c02026;
+}
+
 .callback {
   position: fixed;
   left: -30px;
@@ -274,8 +306,8 @@ img {
   transition: left 0.3s ease, -webkit-box-shadow 0.3s ease 0.2s;
   transition: left 0.3s ease, box-shadow 0.3s ease 0.2s;
   transition: left 0.3s ease, box-shadow 0.3s ease 0.2s, -webkit-box-shadow 0.3s ease 0.2s;
-  -webkit-box-shadow: 0.5em 0 0 0 #f2b142, 0.6em 0 0 0 #f2b142;
-  box-shadow: 0.5em 0 0 0 #f2b142, 0.6em 0 0 0 #f2b142;
+  -webkit-box-shadow: 0.5em 0 0 0 #fcb040, 0.6em 0 0 0 #fcb040;
+  box-shadow: 0.5em 0 0 0 #fcb040, 0.6em 0 0 0 #fcb040;
 }
 
 .sidebar.closed {
@@ -396,72 +428,43 @@ This class is added to the container
 }
 
 #menu #menu_top {
-  background-color: #F2F2F2;
+  background-color: #c02026;
+  padding: 15px 0;
+  color: white;
 }
 
 #menu #menu_top img.menu_logo {
   height: 50px;
 }
 
-#menu #menu_top ul.menu-search {
-  display: block;
-  height: 46px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  list-style: none;
-  width: 100%;
-}
-
-#menu #menu_top ul.menu-search li input {
-  height: 49px;
-  width: 100%;
-  display: block;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: white;
-  color: #333333;
-  border: none;
-}
-
-#menu #menu_top ul.menu-search li a {
-  padding: 15px;
-  background-color: #f2b142;
-  color: #fff;
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  height: 47px;
-  float: left;
-}
-
-#menu #menu_logo_center img {
-  width: inherit;
-}
-
 #menu #menu_bottom {
-  background-color: green;
+  background-color: white;
 }
 
 #menu #menu_bottom .is_active {
-  background-color: #f2b142;
+  background-color: #fcb040;
+}
+
+#menu #menu_bottom img.logo {
+  padding: 25px;
+  width: 125%;
 }
 
 #menu #menu_bottom ul.main_menu {
   display: block;
+  height: 100%;
 }
 
 #menu #menu_bottom ul.main_menu li {
-  display: inline-block;
-  padding: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
   position: relative;
+  height: 100%;
 }
 
 #menu #menu_bottom ul.main_menu li i {
@@ -474,11 +477,16 @@ This class is added to the container
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 #menu #menu_bottom ul.main_menu li:hover {
-  background-color: #f2b142;
+  border-top: 5px solid #c02026;
+  background-color: #fcb040;
+}
+
+#menu #menu_bottom ul.main_menu li:hover a {
+  color: white;
 }
 
 #menu #menu_bottom ul.main_menu li.has-item-down {
@@ -490,11 +498,15 @@ This class is added to the container
   position: absolute;
   opacity: 0;
   display: none;
-  background-color: #f2b142;
+  background-color: white;
   top: 100%;
   left: 0;
   z-index: 9;
   width: 160%;
+}
+
+#menu #menu_bottom ul.main_menu li.has-item-down ul li:first-child {
+  border-top: 5px solid #c02026;
 }
 
 #menu #menu_bottom ul.main_menu li.has-item-down ul li {
@@ -502,10 +514,19 @@ This class is added to the container
   padding-left: 10px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  border: none;
+}
+
+#menu #menu_bottom ul.main_menu li.has-item-down ul li a {
+  color: black;
 }
 
 #menu #menu_bottom ul.main_menu li.has-item-down ul li:hover {
   padding-left: 20px;
+}
+
+#menu #menu_bottom ul.main_menu li.has-item-down ul li:hover a {
+  color: white;
 }
 
 #menu #menu_bottom ul.main_menu li.has-item-down:hover > ul {
@@ -513,44 +534,34 @@ This class is added to the container
   opacity: 1;
 }
 
-#menu #menu_bottom ul.main_menu ul.menu-search {
-  display: block;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  list-style: none;
-  width: 100%;
+#h_service {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-#menu #menu_bottom ul.main_menu ul.menu-search li.li-search {
-  padding: 0;
+#h_service .card-deck {
+  padding: 5px;
 }
 
-#menu #menu_bottom ul.main_menu ul.menu-search li.li-search input {
-  height: 46px;
-  width: 100%;
-  display: block;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: white;
-  color: #333333;
-  border: 1px solid #019934;
-  border-left: none;
+#h_service .card-deck .one-service {
+  background-color: #eee;
+  padding: 52px 10px 40px;
 }
 
-#menu #menu_bottom ul.main_menu ul.menu-search li.li-search a {
-  padding: 16px;
-  background-color: #f2b142;
-  color: #fff;
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  height: 46px;
+#h_service .card-deck .one-service img.img-service {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+#h_service .card-deck .one-service .card-body .card-title {
+  text-align: center;
+  padding: 20px 0 20px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#h_service .card-deck .one-service .card-body .card-text {
+  line-height: 1.5;
+  padding: 0 5px 0 20px;
 }

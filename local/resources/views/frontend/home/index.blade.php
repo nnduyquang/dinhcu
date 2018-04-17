@@ -12,5 +12,6 @@
     @include('frontend.common.slider')
 @stop
 @section('container')
-    hello
+    @include('frontend.home.h_service')
+    @include('frontend.home.h_aboutus')
 @stop
