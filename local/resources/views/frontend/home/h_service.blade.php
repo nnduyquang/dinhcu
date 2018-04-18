@@ -1,4 +1,4 @@
-<div id="h_service" class="">
+<div id="h_service">
     <div class="container">
         <div class="row">
             <div class="card-deck">

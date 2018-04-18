@@ -90,6 +90,15 @@ img {
   border-top: 2px solid #c02026;
 }
 
+@media (max-width: 767px) {
+  .cm_title:before, .cm_title:after {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 140%;
+  }
+}
+
 .callback {
   position: fixed;
   left: -30px;
@@ -564,4 +573,301 @@ This class is added to the container
 #h_service .card-deck .one-service .card-body .card-text {
   line-height: 1.5;
   padding: 0 5px 0 20px;
+}
+
+#h_aboutus #detail {
+  margin-top: 40px;
+}
+
+#h_aboutus #detail .one-aboutus {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+#h_aboutus #detail .one-aboutus h3.title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #2b2b35;
+  text-transform: uppercase;
+}
+
+#h_aboutus #detail .one-aboutus p {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+#h_aboutus #detail .one-aboutus a {
+  background-color: #E6E6E6;
+  border-radius: 10px;
+  display: inline-block;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 72px;
+}
+
+#h_aboutus #detail .one-aboutus a img.img-icon-aboutus {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 35px;
+  vertical-align: middle;
+}
+
+#h_aboutus #detail .img-aboutus-right {
+  background-image: url(../images/temps/home/visa_cho_nha_dau_tu.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  #h_aboutus #detail .one-aboutus {
+    margin-bottom: 33px;
+    text-align: left;
+  }
+  #h_aboutus #detail .one-aboutus p {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+  }
+  #h_aboutus #detail .img-aboutus-right {
+    height: 300px;
+  }
+}
+
+#h_statis {
+  margin-top: 40px;
+  background: url(../images/temps/home/counter_bg4a11.jpg) center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding: 75px;
+}
+
+#h_statis .one-item {
+  color: white;
+  font-size: 24px;
+  font-weight: bolder;
+  z-index: 1;
+}
+
+#h_statis .one-item h2.title {
+  margin-bottom: 10px;
+}
+
+#h_statis .one-item .count-statis {
+  font-size: 30px;
+}
+
+#h_statis:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+}
+
+@media (max-width: 767px) {
+  #h_statis {
+    padding: 60px;
+  }
+  #h_statis .one-item {
+    margin-bottom: 20px;
+  }
+}
+
+#h_whyus {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#h_whyus #detail {
+  margin-top: 40px;
+}
+
+#h_whyus #detail ul.list-li {
+  padding-left: 20px;
+  list-style: none;
+}
+
+#h_whyus #detail ul.list-li li {
+  line-height: 2;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#h_whyus #detail ul.list-li li i {
+  color: #c02026;
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  #h_whyus #detail .img-whyus-right {
+    height: 300px;
+  }
+  #h_whyus #detail ul.list-li {
+    padding: 0;
+  }
+}
+
+#h_news {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#h_news #detail .one-item {
+  margin-top: 40px;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#h_news #detail .one-item .img-news {
+  overflow: hidden;
+}
+
+#h_news #detail .one-item .img-news img.h_news_img {
+  height: 222px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#h_news #detail .one-item .img-news img.h_news_img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+#h_news #detail .one-item h4.title-product {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin: 15px auto 0;
+  letter-spacing: .1px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#h_news #detail .one-item h4.title-product a {
+  color: #c02026;
+}
+
+#h_news #detail .one-item .description {
+  line-height: 1.5;
+}
+
+#h_contact .contact-around {
+  background-color: #c02026;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+}
+
+#h_contact .contact-around h4.title {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+#h_contact .contact-around .description {
+  line-height: 1.5;
+}
+
+#h_contact .contact-around a {
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  margin-top: 20px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+#h_contact .contact-around a:hover {
+  background-color: #fcb040;
+}
+
+@media (max-width: 767px) {
+  #h_contact {
+    text-align: center;
+  }
+  #h_contact .contact-around img.img-contact {
+    margin-top: 20px;
+  }
+}
+
+#h_customer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#footer {
+  color: white;
+}
+
+#footer .footer-top {
+  background-color: #c02026;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#footer .footer-top h4.title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#footer .footer-top ul {
+  list-style: none;
+}
+
+#footer .footer-top ul li {
+  line-height: 1.5;
+}
+
+#footer .footer-top ul li i {
+  margin-right: 10px;
+  color: white;
+}
+
+#footer .footer-top .description {
+  line-height: 1.5;
+}
+
+#footer .footer-bottom {
+  background-color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#footer .footer-bottom .bottom-right {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  #footer .footer-bottom {
+    line-height: 1.5;
+  }
+  #footer .footer-bottom .bottom-left {
+    text-align: center;
+  }
+  #footer .footer-bottom .bottom-right {
+    text-align: center;
+  }
 }

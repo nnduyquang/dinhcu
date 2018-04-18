@@ -22,6 +22,8 @@ mix
     //JS CORE FRONTEND
     .styles([
         'bower_components/nivo-slider/jquery.nivo.slider.pack.js',
+        'bower_components/countUp.js/dist/countUp.min.js',
+        'bower_components/waypoints/lib/noframework.waypoints.min.js',
     ], '../js/core.frontend.js')
     .styles([
         'bower_components/admin-lte/dist/js/adminlte.min.js',

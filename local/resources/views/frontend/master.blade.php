@@ -26,9 +26,7 @@
     @yield('container')
 </div>
 @include('frontend.common.menu.m-sidebar')
-<div class="footer">
-    @include('frontend.common.footer')
-</div>
+@include('frontend.common.footer')
 {{ Html::script('js/core.common.js') }}
 {{ Html::script('js/core.frontend.js') }}
 <script type="text/javascript">
@@ -57,7 +55,8 @@
     </div>
 </div>
 <div class="mess_desk_bot d-none d-md-block" style="position: fixed;bottom:40px;right: 0px;">
-    <a href="tel:0962599482" style="display: block;width: 260px;height: 56px;background: url({{URL::to('images/nenhot.png')}}) no-repeat;text-align: center;padding-top: 10px;color:#fff;font-size: 20px;font-family: 'roboto-bold'">
+    <a href="tel:0962599482"
+       style="display: block;width: 260px;height: 56px;background: url({{URL::to('images/nenhot.png')}}) no-repeat;text-align: center;padding-top: 10px;color:#fff;font-size: 20px;font-family: 'roboto-bold'">
     </a>
 </div>
 
