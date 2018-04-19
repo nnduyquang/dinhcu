@@ -390,7 +390,6 @@ img {
 }
 
 .sidebar .background-sidebar {
-  background-image: url(../images/logo/logo_footer.png);
   height: calc(56px*4);
   background-repeat: no-repeat;
   background-size: contain;
@@ -644,9 +643,9 @@ This class is added to the container
   margin-top: 40px;
   background: url(../images/temps/home/counter_bg4a11.jpg) center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
-  overflow: hidden;
+  background-attachment: fixed;
   padding: 75px;
 }
 
@@ -666,7 +665,7 @@ This class is added to the container
 }
 
 #h_statis:after {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -815,6 +814,36 @@ This class is added to the container
 #h_customer {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+#h_customer #detail .customer_carousel .one-customer {
+  padding: 10px;
+}
+
+#h_customer #detail .customer_carousel .one-customer img.img-customer {
+  height: 200px;
+}
+
+#h_customer #detail .customer-arrow-control .arrow-nav {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#h_customer #detail .customer-arrow-control .arrow-nav .arrow-prev1, #h_customer #detail .customer-arrow-control .arrow-nav .arrow-next1 {
+  display: inline-block;
+  color: white;
+  margin: 5px;
+  padding: 0;
+  width: 33px;
+  height: 33px;
+  font-size: 21px;
+  text-align: center;
+  line-height: 30px;
+  background: #c02026;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
 }
 
 #footer {

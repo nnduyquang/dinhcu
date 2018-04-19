@@ -24,6 +24,7 @@ mix
         'bower_components/nivo-slider/jquery.nivo.slider.pack.js',
         'bower_components/countUp.js/dist/countUp.min.js',
         'bower_components/waypoints/lib/noframework.waypoints.min.js',
+        'bower_components/slick-carousel/slick/slick.js',
     ], '../js/core.frontend.js')
     .styles([
         'bower_components/admin-lte/dist/js/adminlte.min.js',
@@ -35,6 +36,7 @@ mix
     //CSS CORE FRONTEND
     .styles([
         'bower_components/nivo-slider/nivo-slider.css',
+        'bower_components/slick-carousel/slick/slick.css'
     ], '../css/core.frontend.css')
     //CSS CORE BACKEND
     .styles([
