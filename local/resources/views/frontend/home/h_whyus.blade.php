@@ -6,17 +6,20 @@
         <div id="detail" class="col-md-12">
             <div class="row">
                 <div class="col-md-6 p-0">
-                    {{ Html::image('images/temps/home/whyus937d.jpg','',array('class'=>'img-whyus-right')) }}
+                    <a class="fancybox" data-fancybox="gallery-why"
+                       href="{{url('/').'/images/home/why/why_us.JPG'}}">
+                        {{ Html::image('images/home/why/why_us.JPG','',array('class'=>'img-whyus-right')) }}
+                    </a>a
                 </div>
                 <div class="col-md-6 justify-content-center align-self-center p-0">
-                        <ul class="list-li">
-                            <li><i class="fas fa-check"></i>Nhân Viên Thân Thiện Dễ Thương</li>
-                            <li><i class="fas fa-check"></i>Tuân Thủ Đúng Thời Gian</li>
-                            <li><i class="fas fa-check"></i>Bảo Mật Thông Tin</li>
-                            <li><i class="fas fa-check"></i>Sáng Tạo Không Giới Hạn</li>
-                            <li><i class="fas fa-check"></i>An Toàn Tuyệt Đối</li>
-                            <li><i class="fas fa-check"></i>Chất Lượng Tuyệt Vời</li>
-                        </ul>
+                    <ul class="list-li">
+                        <li><i class="fas fa-check"></i>Nhân Viên Thân Thiện Dễ Thương</li>
+                        <li><i class="fas fa-check"></i>Tuân Thủ Đúng Thời Gian</li>
+                        <li><i class="fas fa-check"></i>Bảo Mật Thông Tin</li>
+                        <li><i class="fas fa-check"></i>Sáng Tạo Không Giới Hạn</li>
+                        <li><i class="fas fa-check"></i>An Toàn Tuyệt Đối</li>
+                        <li><i class="fas fa-check"></i>Chất Lượng Tuyệt Vời</li>
+                    </ul>
                 </div>
             </div>
         </div>
