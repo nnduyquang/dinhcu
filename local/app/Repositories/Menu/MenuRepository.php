@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Menu;
 
+use App\CategoryItem;
 use App\CategoryPost;
 use App\Menu;
 use App\Post;
@@ -199,6 +200,17 @@ class MenuRepository extends EloquentRepository implements MenuRepositoryInterfa
         foreach ($listMenu as $key => $data) {
 
         }
+    }
+    public function getFrontendMenu()
+    {
+        $data = [];
+        $categoryMain = CategoryItem::where('level', MENU_GOC)->where('type', CATEGORY_POST)->get();
+        foreach ($categoryMain as $key=>$data){
+            $categorySub=CategoryItem::where('level',MENU_CAP_1)->where('parent_id',$data->id)->get();
+            $data->categorySub=$categorySub;
+        }
+        $data['categoryMain'] = $categoryMain;
+        return $data;
     }
 
 

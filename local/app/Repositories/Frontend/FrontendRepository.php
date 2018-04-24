@@ -109,22 +109,23 @@ class FrontendRepository implements FrontendRepositoryInterface
         return $data;
     }
 
-    public function getProductByCategoryMain($path)
+    public function getPostByCategory($pathMain, $pathSub)
     {
         $data = [];
-        $categoryMain = CategoryItem::where('path', $path)->first();
-        $categorySub = CategoryItem::where('parent_id', $categoryMain->id)->get();
-        $products = $products = Product::whereIn('category_product_id', function ($query) use ($categoryMain) {
-            $query->select('id')->from(with(new CategoryItem)->getTable())->where('parent_id', $categoryMain->id);
-        })->orderBy('id', 'DESC')->get();
-        foreach ($products as $key => $data) {
-            $data->price = number_format($data->price, 0, ',', '.');
-            $data->final_price = number_format($data->final_price, 0, ',', '.');
+        $post = Post::where('category_item_id', function ($query) use ($pathSub, $pathMain) {
+            $query->select('id')->from(with(new CategoryItem)->getTable())->where('path', $pathSub)->where('parent_id', function ($query2) use ($pathMain) {
+                $query2->select('id')->from(with(new CategoryItem)->getTable())->where('path', $pathMain);
+            });
+        })->get();
+        if (count($post) == 1) {
+            $data['post'] = $post;
+        } elseif (count($post) == 0) {
+            $data['mainCategory'] = CategoryItem::where('path', $pathSub)->first();
+            $data['post'] = $post;
+        } else {
+            $data['mainCategory'] = CategoryItem::where('path', $pathMain)->get();
+            $data['post'] = $post;
         }
-        $data['category'] = $categoryMain;
-        $data['categorySub'] = $categorySub;
-        $data['products'] = $products;
-        $data['type'] = 1;
         return $data;
     }
 
@@ -195,6 +196,16 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data['news'] = $news;
         $data['others'] = $others;
         $data['type'] = 2;
+        return $data;
+    }
+
+    public function getAllPostByCategoryMain($path)
+    {
+        $data = [];
+        $mainCategory = CategoryItem::where('level', MENU_GOC)->where('path', $path)->first();
+        $post = Post::where('category_item_id', $mainCategory->id)->get();
+        $data['mainCategory'] = $mainCategory;
+        $data['post'] = $post;
         return $data;
     }
 

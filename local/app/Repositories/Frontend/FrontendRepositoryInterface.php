@@ -6,7 +6,7 @@ interface FrontendRepositoryInterface
 {
     public function getAllSidebar();
 
-    public function getProductByCategoryMain($path);
+    public function getPostByCategory($pathMain,$pathSub);
 
     public function getProductByCategorySub($pathParent, $pathSub);
 
@@ -33,4 +33,6 @@ interface FrontendRepositoryInterface
     public function getAllNews();
 
     public function getNewsDetail($path);
+
+    public function getAllPostByCategoryMain($path);
 }

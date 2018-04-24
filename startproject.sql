@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2018 at 05:50 AM
+-- Generation Time: Apr 23, 2018 at 11:48 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.27
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sangohoanghaiminh`
+-- Database: `dinhcu`
 --
 
 -- --------------------------------------------------------
@@ -44,6 +44,29 @@ CREATE TABLE `category_items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `category_items`
+--
+
+INSERT INTO `category_items` (`id`, `name`, `path`, `description`, `image`, `image_mobile`, `level`, `parent_id`, `type`, `seo_title`, `seo_description`, `seo_keywords`, `order`, `isActive`, `created_at`, `updated_at`) VALUES
+(1, 'Bảo Lãnh Mỹ', 'bao-lanh-my', '<p>\r\n	Bảo Lãnh Mỹ\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 'Bảo Lãnh Mỹ', 'Bảo Lãnh Mỹ', 'Bảo Lãnh Mỹ', 1, 1, '2018-04-23 02:39:46', '2018-04-23 02:39:46'),
+(2, 'Diện Hôn Phu / Hôn Thê', 'dien-hon-phu-hon-the', '<p>\r\n	Diện Hôn Phu / Hôn Thê\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 1, 0, 'Diện Hôn Phu - Hôn Thê', 'Diện Hôn Phu - Hôn Thê', 'Diện Hôn Phu - Hôn Thê', 1, 1, '2018-04-23 02:40:32', '2018-04-23 02:40:32'),
+(3, 'Diện Vợ Chồng', 'dien-vo-chong', '<p>\r\n	Diện Vợ Chồng\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 1, 0, 'Diện Vợ Chồng', 'Diện Vợ Chồng', 'Diện Vợ Chồng', 2, 1, '2018-04-23 02:40:57', '2018-04-23 02:40:57'),
+(4, 'Diện Đồng Tính', 'dien-dong-tinh', '<p>\r\n	Diện Đồng Tính\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 1, 0, 'Diện Đồng Tính', 'Diện Đồng Tính', 'Diện Đồng Tính', 3, 1, '2018-04-23 02:41:21', '2018-04-23 02:41:21'),
+(5, 'Các Diện Gia Đình Khác(F1/F2/F3/F4)', 'cac-dien-gia-dinh-khacf1f2f3f4', '<p>\r\n	Các Diện Gia Đình Khác(F1/F2/F3/F4)\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 1, 0, 'Các Diện Gia Đình Khác(F1/F2/F3/F4)', 'Các Diện Gia Đình Khác(F1/F2/F3/F4)', 'Các Diện Gia Đình Khác', 4, 1, '2018-04-23 02:42:04', '2018-04-23 02:42:04'),
+(6, 'Bảo Lãnh Úc', 'bao-lanh-uc', '<p>\r\n	Bảo Lãnh Úc\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 'Bảo Lãnh Úc', 'Bảo Lãnh Úc', 'Bảo Lãnh Úc', 2, 1, '2018-04-23 02:42:57', '2018-04-23 02:42:57'),
+(7, 'Diện Hôn Phu / Hôn Thê', 'dien-hon-phu-hon-the', '<p>\r\n	Diện Hôn Phu / Hôn Thê\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 6, 0, 'Diện Hôn Phu / Hôn Thê', 'Diện Hôn Phu / Hôn Thê', 'Diện Hôn Phu - Hôn Thê', 1, 1, '2018-04-23 02:43:29', '2018-04-23 02:43:29'),
+(8, 'Diện Vợ Chồng', 'dien-vo-chong', '<p>\r\n	Diện Vợ Chồng\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 6, 0, 'Diện Vợ Chồng', 'Diện Vợ Chồng', 'Diện Vợ Chồng', 2, 1, '2018-04-23 02:43:52', '2018-04-23 02:43:52'),
+(9, 'Diện Đồng Tính', 'dien-dong-tinh', '<p>\r\n	Diện Đồng Tính\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 6, 0, 'Diện Đồng Tính', 'Diện Đồng Tính', 'Diện Đồng Tính', 3, 1, '2018-04-23 02:44:48', '2018-04-23 02:44:48'),
+(10, 'Con Bảo Lãnh 173-143', 'con-bao-lanh-173-143', '<p>\r\n	Con Bảo Lãnh 173-143\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 6, 0, 'Con Bảo Lãnh 173-143', 'Con Bảo Lãnh 173-143', 'Con Bảo Lãnh 173-143', 4, 1, '2018-04-23 02:47:06', '2018-04-23 02:47:06'),
+(11, 'Quốc Tịch Sinh Con Tại VN', 'quoc-tich-sinh-con-tai-vn', '<p>\r\n	Quốc Tịch Sinh Con Tại VN\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 'Quốc Tịch Sinh Con Tại VN', 'Quốc Tịch Sinh Con Tại VN', 'Quốc Tịch Sinh Con Tại VN', 3, 1, '2018-04-23 02:47:31', '2018-04-23 02:47:31'),
+(12, 'Mỹ', 'my', '<p>\r\n	Mỹ\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 11, 0, 'Mỹ', 'Mỹ', 'Mỹ', 1, 1, '2018-04-23 02:48:00', '2018-04-23 02:48:00'),
+(13, 'Úc', 'uc', '<p>\r\n	Úc\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 11, 0, 'Úc', 'Úc', 'Úc', 2, 1, '2018-04-23 03:03:00', '2018-04-23 03:03:00'),
+(14, 'Du Lịch', 'du-lich', '<p>\r\n	Du Lịch\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 'Du Lịch', 'Du Lịch', 'Du Lịch', 4, 1, '2018-04-23 03:03:35', '2018-04-23 03:03:35'),
+(15, 'Úc - 600', 'uc-600', '<p>\r\n	Úc - 600\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 1, 14, 0, 'Úc - 600', 'Úc - 600', 'Úc - 600', 1, 1, '2018-04-23 03:03:58', '2018-04-23 03:04:10'),
+(16, 'Mỹ - B1/B2', 'my-b1b2', NULL, 'images/uploads/images/gt_1.jpg', NULL, 1, 14, 0, 'Mỹ - B1/B2', 'Mỹ - B1/B2', 'Mỹ - B1/B2', 2, 1, '2018-04-23 03:04:36', '2018-04-23 03:04:46'),
+(17, 'Tin Tức', 'tin-tuc', '<p>\r\n	Tin Tức\r\n</p>', 'images/uploads/images/gt_1.jpg', NULL, 0, NULL, 0, 'Tin Tức', 'Tin Tức', 'Tin Tức', 5, 1, '2018-04-23 03:05:23', '2018-04-23 03:05:23');
 
 -- --------------------------------------------------------
 
@@ -243,10 +266,23 @@ CREATE TABLE `posts` (
   `seo_keywords` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `post_type` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `isActive` tinyint(1) NOT NULL DEFAULT '1',
+  `category_item_id` int(10) DEFAULT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `title`, `path`, `description`, `content`, `image`, `seo_title`, `seo_description`, `seo_keywords`, `post_type`, `isActive`, `category_item_id`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'Giới Thiệu', 'gioi-thieu', '<p>\r\n	Giới Thiệu\r\n</p>', '<p>\r\n	Giới Thiệu\r\n</p>', 'images/uploads/images/gt_1.jpg', 'Giới Thiệu', 'Giới Thiệu', 'Giới Thiệu', 0, 1, NULL, 1, '2018-04-23 02:34:21', '2018-04-23 02:34:21'),
+(2, 'Liên Hệ', 'lien-he', '<p>\r\n	Liên Hệ\r\n</p>', '<p>\r\n	Liên Hệ\r\n</p>', 'images/uploads/images/gt_1.jpg', 'Liên Hệ', 'Liên Hệ', 'Liên Hệ', 0, 1, NULL, 1, '2018-04-23 02:34:36', '2018-04-23 02:34:36'),
+(3, 'Diện Hôn Phu/ Hôn Thê', 'dien-hon-phu-hon-the', '<p>\r\n	Bài Viết Diện Hôn Phu/ Hôn Thê\r\n</p>', '<p>\r\n	Bài Viết Diện Hôn Phu/ Hôn Thê\r\n</p>', 'images/uploads/images/gt_1.jpg', 'Bài Viết Diện Hôn Phu/ Hôn Thê', 'Bài Viết Diện Hôn Phu/ Hôn Thê', 'Bài Viết Diện Hôn Phu/ Hôn Thê', 1, 1, 2, 1, '2018-04-23 03:25:19', '2018-04-23 03:25:19'),
+(4, 'Bài Viết Diện Vơ Chồng', 'bai-viet-dien-vo-chong', '<p>\r\n	Bài Viết Diện Vơ Chồng\r\n</p>', '<p>\r\n	Bài Viết Diện Vơ Chồng\r\n</p>', 'images/uploads/images/gt_1.jpg', 'Bài Viết Diện Vơ Chồng', 'Bài Viết Diện Vơ Chồng', 'Bài Viết Diện Vơ Chồng', 1, 1, 3, 1, '2018-04-23 03:25:47', '2018-04-23 03:25:47'),
+(5, 'Tin Tức 1', 'tin-tuc-1', '<p>\r\n	Tin Tức 1\r\n</p>', '<p>\r\n	Tin Tức 1\r\n</p>', 'images/uploads/images/gt_1.jpg', 'Tin Tức 1', 'Tin Tức 1', 'Tin Tức 1', 1, 1, 17, 1, '2018-04-23 08:00:48', '2018-04-23 08:00:48'),
+(6, 'Tin Tức 2', 'tin-tuc-2', '<p>\r\n	Tin Tức 2\r\n</p>', '<p>\r\n	Tin Tức 2\r\n</p>', 'images/uploads/images/gt_1.jpg', 'Tin Tức 2', 'Tin Tức 2', 'Tin Tức 2', 1, 1, 17, 1, '2018-04-23 08:01:04', '2018-04-23 08:01:04');
 
 -- --------------------------------------------------------
 
@@ -440,7 +476,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `category_items`
 --
 ALTER TABLE `category_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `category_permissions`
 --
@@ -470,12 +506,12 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=302;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `roles`
 --

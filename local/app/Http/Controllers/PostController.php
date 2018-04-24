@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $posts = Post::where('post_type','!=',1)->orderBy('id', 'DESC')->get();
+        $posts = Post::where('post_type','=',IS_POST)->orderBy('id', 'DESC')->get();
         return view('backend.admin.post.index', compact('posts'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
@@ -64,7 +64,7 @@ class PostController extends Controller
             $image = substr($image, strpos($image, 'images'), strlen($image) - 1);
             $post->image = $image;
         }
-        $post_type = $request->input('parent');
+        $categoryItemId = $request->input('parent');
         if ($isActive) {
             $post->isActive = 1;
         } else {
@@ -84,9 +84,9 @@ class PostController extends Controller
         }
         $post->title = $title;
         $post->path = chuyen_chuoi_thanh_path($title);
-
         $post->content = $content;
-        $post->post_type = $post_type;
+        $post->category_item_id=$categoryItemId;
+        $post->post_type = IS_POST;
         $post->user_id = Auth::user()->id;
         $post->save();
         return redirect()->route('post.index')->with('success', 'Tạo Mới Thành Công Bài Viết');

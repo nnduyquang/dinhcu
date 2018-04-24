@@ -14,11 +14,17 @@ class FrontendController extends Controller
         $this->frontendRepository = $frontendRepository;
     }
 
-    public function getProductByCategoryMain($path)
+    public function getPostByCategory($pathMain,$pathSub)
     {
-        $data = $this->frontendRepository->getProductByCategoryMain($path);
-        return view('frontend.category.index', compact('data'));
+        $data = $this->frontendRepository->getPostByCategory($pathMain,$pathSub);
+        return view('frontend.post.index', compact('data'));
     }
+    public function getAllPostByCategoryMain($path)
+    {
+        $data = $this->frontendRepository->getAllPostByCategoryMain($path);
+        return view('frontend.post.index', compact('data'));
+    }
+
 
     public function getProductByCategorySub($pathParent, $pathSub)
     {
@@ -74,6 +80,8 @@ class FrontendController extends Controller
         $data = $this->frontendRepository->getNewsDetail($path);
         return view('frontend.news.index', compact('data'));
     }
+
+
 
 }
 

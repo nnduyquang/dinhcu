@@ -5,7 +5,10 @@ Route::get('/', function () {
     return view('frontend.home.index');
 });
 Route::post('/tim-kiem','FrontendController@getSearch')->name('search');
-
+Route::get('/trang/{path}','FrontendController@getPageContent');
+Route::get('/bai-viet/{path}','FrontendController@getCategoryPostContent');
+Route::get('/danh-muc/{pathMain}/{pathSub}','FrontendController@getPostByCategory');
+Route::get('/danh-muc/{path}','FrontendController@getAllPostByCategoryMain');
 
 
 Route::get('/admin/sml_login', 'AuthController@checklogin');
