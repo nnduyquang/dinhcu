@@ -13,12 +13,10 @@
                 </div>
                 <div class="col-md-6 justify-content-center align-self-center p-0">
                     <ul class="list-li">
-                        <li><i class="fas fa-check"></i>Nhân Viên Thân Thiện Dễ Thương</li>
-                        <li><i class="fas fa-check"></i>Tuân Thủ Đúng Thời Gian</li>
-                        <li><i class="fas fa-check"></i>Bảo Mật Thông Tin</li>
-                        <li><i class="fas fa-check"></i>Sáng Tạo Không Giới Hạn</li>
-                        <li><i class="fas fa-check"></i>An Toàn Tuyệt Đối</li>
-                        <li><i class="fas fa-check"></i>Chất Lượng Tuyệt Vời</li>
+                        <li><i class="fas fa-check"></i>Đội ngũ Luật sư – Chuyên viên giàu kinh nghiệm, trách nhiệm công việc</li>
+                        <li><i class="fas fa-check"></i>Cập nhật luật di trú thường xuyên, mới nhất</li>
+                        <li><i class="fas fa-check"></i>Bảo mật thông tin, hồ sơ khách hàng</li>
+                        <li><i class="fas fa-check"></i>Đạo đức kinh doanh là kim chỉ nam hoạt động & định hướng doanh nghiệp</li>
                     </ul>
                 </div>
             </div>

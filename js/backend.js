@@ -197,6 +197,8 @@ $('button#deleteMenu').click(function () {
 });
 
 
+integratedCKEDITOR('description-content',height=200);
+integratedCKEDITOR('description-signatures',height=200);
 if ($('#btnBrowseImageMobile').length) {
     var button1 = document.getElementById('btnBrowseImageMobile');
     button1.onclick = function () {

@@ -27,25 +27,25 @@
         </li>
         <li><a href="{{ route('product.index') }}"><i class="fa fa-link"></i> <span>Sản Phẩm</span></a>
         </li>
-        <li><a href="{{ route('config.index') }}"><i class="fa fa-link"></i> <span>Cấu Hình</span></a>
-        </li>
+        {{--<li><a href="{{ route('config.index') }}"><i class="fa fa-link"></i> <span>Cấu Hình</span></a>--}}
+        {{--</li>--}}
 
         {{--<li><a href="{{ route('tuyendung.index') }}"><i class="fa fa-link"></i> <span>Tuyển Dụng</span></a>--}}
         {{--</li>--}}
         {{--<li><a href="{{ route('menu.index') }}"><i class="fa fa-link"></i> <span>Quản Lý Menu</span></a>--}}
         {{--</li>--}}
-        {{--<li class="treeview">--}}
-        {{--<a href="#"><i class="fa fa-link"></i><span>Cấu Hình</span>--}}
-        {{--<span class="pull-right-container">--}}
-        {{--<i class="fa fa-angle-left pull-right"></i>--}}
-        {{--</span>--}}
-        {{--</a>--}}
-        {{--<ul class="treeview-menu">--}}
-        {{--<li><a href="#">Cấu Hình Chung</a></li>--}}
-        {{--<li><a href="{{ route('config.email.index') }}">Email</a></li>--}}
-        {{--<li><a href="{{ route('config.slider.index') }}"><i class="fa fa-link"></i>--}}
-        {{--<span>Quản Lý Slider</span></a>--}}
-        {{--</li>--}}
-        {{--</ul>--}}
-        {{--</li>--}}
+        <li class="treeview">
+            <a href="#"><i class="fa fa-link"></i><span>Cấu Hình</span>
+                <span class="pull-right-container">
+        <i class="fa fa-angle-left pull-right"></i>
+        </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('config.general.index') }}">Cấu Hình Chung</a></li>
+                <li><a href="{{ route('config.email.index') }}">Cấu Hình Email</a></li>
+                {{--<li><a href="#"><i class="fa fa-link"></i>--}}
+                        {{--<span>Quản Lý Slider</span></a>--}}
+                {{--</li>--}}
+            </ul>
+        </li>
 </ul>

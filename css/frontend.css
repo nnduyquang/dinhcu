@@ -579,7 +579,7 @@ This class is added to the container
 }
 
 #h_aboutus #detail .one-aboutus {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: right;
 }
 
@@ -858,6 +858,48 @@ This class is added to the container
 
 #pa_info .pa_info_detail .description {
   line-height: 1.5;
+}
+
+#contact_info {
+  margin-bottom: 20px;
+}
+
+#contact_info .contact_top h3.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#contact_info .contact_top p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#contact_info .contact_top h4 {
+  font-size: 30px;
+  color: #c02026;
+}
+
+#contact_info .contact_top ul {
+  list-style: none;
+}
+
+#contact_info .contact_bottom .input-group {
+  margin-bottom: 20px;
+}
+
+#contact_info .contact_bottom .input-group input, #contact_info .contact_bottom .input-group textarea {
+  border-radius: inherit;
+}
+
+#contact_info .contact_bottom button {
+  border-radius: inherit;
+  background-color: #c02026;
+  color: white;
+  font-weight: bold;
+}
+
+#contact_info .contact_bottom button .successSending, #contact_info .contact_bottom button .loadingSending {
+  margin-left: 5px;
 }
 
 #po_info .po_info_content h1.title {

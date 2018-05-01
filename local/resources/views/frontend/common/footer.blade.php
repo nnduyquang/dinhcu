@@ -5,10 +5,7 @@
                 <div class="col-md-4">
                     <h4 class="title">Về Chúng Tôi</h4>
                     <div class="description">
-                        Công ty BLUESEA đã phát triển thành một tổ chức quốc tế hàng đầu trong lĩnh vực tư vấn dịch vụ
-                        pháp lý, đặc biệt là trong mảng đầu tư định cư. Chúng tôi hiện đang có mặt tại 13 quốc gia trên
-                        toàn thế giới và được công nhận bởi nhiều tổ chức uy tín với các giải thưởng danh giá trong
-                        ngành luật di trú.
+                        Với hơn 15 năm kinh nghiệm trong lĩnh vực định cư đoàn tụ gia đình Úc-Mỹ, Top Ten Immigration gồm các đội ngũ luật sư và chuyên viên tư vấn định cư giàu kinh nghiệm, với chuyên môn cập nhật luật di trú mới nhất
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -34,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 bottom-left">
-                    <span>Copyright © 2018 Đầu tư định cư Bluesea. Powered by BLUESEA</span>
+                    <span>Copyright © 2018 Top Ten Immigration. Powered by Top Ten</span>
                 </div>
                 <div class="col-md-4 bottom-right">
                     <span>Designed By <a href="#">smartlinks.vn</a></span>

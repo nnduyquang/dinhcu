@@ -24,7 +24,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    {!! Form::open(array('route' => 'config.store','method'=>'POST')) !!}
+    {!! Form::open(array('route' => 'config.general.store','method'=>'POST')) !!}
 
     @foreach($cauhinhs as $key=>$cauhinh)
         @if($cauhinh->name=='config-contact')
