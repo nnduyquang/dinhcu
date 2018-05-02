@@ -560,6 +560,7 @@ This class is added to the container
   margin-left: auto;
   margin-right: auto;
   width: 100px;
+  height: 62px;
 }
 
 #h_service .card-deck .one-service .card-body .card-title {
@@ -745,6 +746,7 @@ This class is added to the container
 }
 
 #h_news #detail .one-item h4.title-product {
+  height: 70px;
   display: block;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -875,12 +877,17 @@ This class is added to the container
 }
 
 #contact_info .contact_top h4 {
-  font-size: 30px;
+  font-size: 20px;
   color: #c02026;
+  margin-bottom: 20px;
 }
 
 #contact_info .contact_top ul {
   list-style: none;
+}
+
+#contact_info .contact_top ul li i {
+  margin-right: 10px;
 }
 
 #contact_info .contact_bottom .input-group {

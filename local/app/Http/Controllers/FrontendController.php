@@ -81,6 +81,11 @@ class FrontendController extends Controller
         return view('frontend.news.index', compact('data'));
     }
 
+    public function getFrontendHomepage(){
+        $data = $this->frontendRepository->getFrontendHomepage();
+        return view('frontend.home.index', compact('data'));
+    }
+
 
 
 }

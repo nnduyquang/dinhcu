@@ -46,10 +46,13 @@
                 <div class="contact_top">
                     <h3 class="title">Địa Chỉ Liên Hệ</h3>
                     <hr>
-                    <h4>Top Ten Immigration</h4>
+                    <h4 class="title">T.T.I - Immigration- Phòng Visa Định cư & Du học
+                        Lầu 1 & 2, tòa nhà TOP TEN BUILDING</h4>
                     <ul>
-                        <li>a</li>
-                        <li>b</li>
+                        <li><i class="far fa-building"></i>02 Giải phóng, P. 04, Tân Bình, TP. HCM</li>
+                        <li><i class="fas fa-phone"></i>Office phone: (028) 62907799</li>
+                        <li><i class="fas fa-phone"></i>Hotline: 0901.226.286</li>
+                        <li><i class="far fa-envelope"></i>info@toptenimmigration.com.vn</li>
                     </ul>
                 </div>
             </div>

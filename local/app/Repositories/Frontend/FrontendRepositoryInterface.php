@@ -35,4 +35,6 @@ interface FrontendRepositoryInterface
     public function getNewsDetail($path);
 
     public function getAllPostByCategoryMain($path);
+
+    public function getFrontendHomepage();
 }

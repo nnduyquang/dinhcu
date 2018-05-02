@@ -1,15 +1,12 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
+Route::get('/', 'FrontendController@getFrontendHomepage');
 Route::post('/tim-kiem','FrontendController@getSearch')->name('search');
 Route::get('/trang/{path}','FrontendController@getPageContent');
 Route::get('/bai-viet/{path}','FrontendController@getCategoryPostContent');
 Route::get('/danh-muc/{pathMain}/{pathSub}','FrontendController@getPostByCategory');
 Route::get('/danh-muc/{path}','FrontendController@getAllPostByCategoryMain');
-
 Route::post('/sendmail/send', ['as' => 'mail.send', 'uses' => 'MailController@send']);
 Route::get('/admin/sml_login', 'AuthController@checklogin');
 Route::post('sml_login', 'AuthController@login')->name('login');

@@ -155,7 +155,7 @@ class PostController extends Controller
         } else {
             $post->image = NULL;
         }
-        $post_type = $request->input('parent');
+        $categoryItemId = $request->input('parent');
         if ($isActive) {
             $post->isActive = 1;
         } else {
@@ -177,7 +177,8 @@ class PostController extends Controller
         $post->path = chuyen_chuoi_thanh_path($title);
 
         $post->content = $content;
-        $post->post_type = $post_type;
+        $post->post_type = IS_POST;
+        $post->category_item_id=$categoryItemId;
         $post->user_id = Auth::user()->id;
         $post->save();
         return redirect()->route('post.index')->with('success', 'Cập Nhật Thành Công Bài Viết');

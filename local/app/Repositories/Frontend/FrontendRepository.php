@@ -156,11 +156,11 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getCategoryPostContent($path)
     {
         $data = [];
-        $categoryPost = CategoryItem::where('path', $path)->first();
-        $posts = Post::where('post_type', $categoryPost->id)->get();
-        $categoryPost->posts = $posts;
-        $data['categoryPost'] = $categoryPost;
-        $data['type'] = 1;
+//        $categoryPost = CategoryItem::where('path', $path)->first();
+        $post = Post::where('path', $path)->get();
+//        $categoryPost->posts = $posts;
+        $data['post'] = $post;
+//        $data['type'] = 1;
         return $data;
     }
 
@@ -206,6 +206,19 @@ class FrontendRepository implements FrontendRepositoryInterface
         $post = Post::where('category_item_id', $mainCategory->id)->get();
         $data['mainCategory'] = $mainCategory;
         $data['post'] = $post;
+        return $data;
+    }
+
+    public function getFrontendHomepage()
+    {
+        $data=[];
+        $listNews=Post::where('category_item_id',function($query){
+            $query->select('id')->from(with(new CategoryItem)->getTable())->where('path','tin-tuc');
+        })->take(3)->get();
+        foreach ($listNews as $key=>$item){
+            $item->description=loai_bo_html_tag($item->description);
+        }
+        $data['listNews']=$listNews;
         return $data;
     }
 

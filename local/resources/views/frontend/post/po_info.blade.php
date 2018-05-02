@@ -5,8 +5,11 @@
                 @if(count($data['post'])==1)
                     <h1 class="title">{{$data['post'][0]->title}}</h1>
 
-                    <div class="description">
-                        {!!$data['post'][0]->description !!}
+                    {{--<div class="description">--}}
+                        {{--{!!$data['post'][0]->description !!}--}}
+                    {{--</div>--}}
+                    <div class="detail">
+                        {!! $data['post'][0]->content !!}
                     </div>
                 @elseif(count($data['post'])==0)
                     <h1 class="title">{{$data['mainCategory']->name}}</h1>
@@ -15,10 +18,10 @@
                         {!!$data['mainCategory']->description !!}
                     </div>
                 @else
-                    <h1 class="title">{{$data['post'][0]->title}}</h1>
+                    <h1 class="title">{{$data['mainCategory']->name}}</h1>
 
                     <div class="description">
-                        {!!$data['post'][0]->description !!}
+                        {!!$data['mainCategory']->description !!}
                     </div>
                 @endif
                 @if(count($data['post'])>1)
@@ -26,7 +29,7 @@
                         <div class="row m-0">
                             @foreach($data['post'] as $key=>$item)
                                 <div class="one-po-item col-md-4 card">
-                                    <a href="{{URL::to('bai-viet/'.'/'.$item->path)}}">  {{ Html::image($item->image,'',array('class'=>'po_item_img'))}}</a>
+                                    <a href="{{URL::to('bai-viet/'.$item->path)}}">  {{ Html::image($item->image,'',array('class'=>'po_item_img'))}}</a>
                                     <div class="card-body">
                                         <h4 class="title-product"><a
                                                     href="{{URL::to('bai-viet/'.$item->path)}}">{{$item->title}}</a>
