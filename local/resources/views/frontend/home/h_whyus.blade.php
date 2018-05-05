@@ -9,7 +9,7 @@
                     <a class="fancybox" data-fancybox="gallery-why"
                        href="{{url('/').'/images/home/why/why_us.JPG'}}">
                         {{ Html::image('images/home/why/why_us.JPG','',array('class'=>'img-whyus-right')) }}
-                    </a>a
+                    </a>
                 </div>
                 <div class="col-md-6 justify-content-center align-self-center p-0">
                     <ul class="list-li">

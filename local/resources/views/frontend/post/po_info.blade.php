@@ -18,10 +18,10 @@
                         {!!$data['mainCategory']->description !!}
                     </div>
                 @else
-                    <h1 class="title">{{$data['mainCategory']->name}}</h1>
+                    <h1 class="title">{{$data['mainCategory'][0]->name}}</h1>
 
                     <div class="description">
-                        {!!$data['mainCategory']->description !!}
+                        {!!$data['mainCategory'][0]->description !!}
                     </div>
                 @endif
                 @if(count($data['post'])>1)

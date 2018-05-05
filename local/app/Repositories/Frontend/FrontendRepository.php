@@ -202,8 +202,8 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getAllPostByCategoryMain($path)
     {
         $data = [];
-        $mainCategory = CategoryItem::where('level', MENU_GOC)->where('path', $path)->first();
-        $post = Post::where('category_item_id', $mainCategory->id)->get();
+        $mainCategory = CategoryItem::where('level', MENU_GOC)->where('path', $path)->get();
+        $post = Post::where('category_item_id', $mainCategory[0]->id)->get();
         $data['mainCategory'] = $mainCategory;
         $data['post'] = $post;
         return $data;

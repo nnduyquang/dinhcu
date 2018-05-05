@@ -5,22 +5,26 @@
     @elseif(count($data['post'])==0)
         {{$data['mainCategory']->seo_title}}
     @else
-        {{$data['mainCategory']->seo_title}}
+        {{$data['mainCategory'][0]->seo_title}}
     @endif
 
 @stop
 @section('description')
     @if(count($data['post'])==1)
         {{$data['post'][0]->seo_description}}
-    @else
+    @elseif(count($data['post'])==0)
         {{$data['mainCategory']->seo_description}}
+    @else
+        {{$data['mainCategory'][0]->seo_description}}
     @endif
 @stop
 @section('keyword')
     @if(count($data['post'])==1)
         {{$data['post'][0]->seo_keywords}}
-    @else
+    @elseif(count($data['post'])==0)
         {{$data['mainCategory']->seo_keywords}}
+    @else
+        {{$data['mainCategory'][0]->seo_keywords}}
     @endif
 @stop
 @section('styles')

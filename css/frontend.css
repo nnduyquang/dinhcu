@@ -909,7 +909,12 @@ This class is added to the container
   margin-left: 5px;
 }
 
-#po_info .po_info_content h1.title {
+#po_info, span {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#po_info .po_info_content h1.title, span .po_info_content h1.title {
   font-size: 30px;
   color: #c02026;
   margin-bottom: 20px;
@@ -919,22 +924,22 @@ This class is added to the container
   padding-bottom: 10px;
 }
 
-#po_info .po_info_content .description {
+#po_info .po_info_content .description, span .po_info_content .description {
   line-height: 1.5;
 }
 
-#po_info .po_info_detail .one-po-item {
+#po_info .po_info_detail .one-po-item, span .po_info_detail .one-po-item {
   margin-top: 40px;
   position: relative;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-#po_info .po_info_detail .one-po-item img.po_item_img {
+#po_info .po_info_detail .one-po-item img.po_item_img, span .po_info_detail .one-po-item img.po_item_img {
   height: 157px;
 }
 
-#po_info .po_info_detail .one-po-item h4.title-product {
+#po_info .po_info_detail .one-po-item h4.title-product, span .po_info_detail .one-po-item h4.title-product {
   display: block;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -951,7 +956,7 @@ This class is added to the container
   text-transform: uppercase;
 }
 
-#po_info .po_info_detail .one-po-item h4.title-product a {
+#po_info .po_info_detail .one-po-item h4.title-product a, span .po_info_detail .one-po-item h4.title-product a {
   color: #c02026;
 }
 
